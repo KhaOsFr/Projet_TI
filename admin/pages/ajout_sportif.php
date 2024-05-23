@@ -42,7 +42,7 @@ $event = $eventDB->getAllEvents();
                 <?php endforeach; ?>
             </select>
         </div>
-        <button type="submit" id="texte_bouton_submit_sportif" value="Ajouter" class="btn btn-primary">
+        <button type="submit" id="texte_bouton_submit_sportif" class="btn btn-primary">
             Ajouter
         </button>
         <button class="btn btn-primary" type="reset" id="reset">Annuler</button>

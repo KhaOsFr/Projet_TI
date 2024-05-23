@@ -1,5 +1,6 @@
 $(document).ready(function () {
 
+
     $('#texte_bouton_submit_sportif').click(function (e) {
         e.preventDefault();
         let nom = $('#nom').val();
@@ -16,8 +17,8 @@ $(document).ready(function () {
             url: './src/php/ajax/ajaxAjoutSportif.php',
             success: function (data) {
                 console.log(data);
+                alert("Le sportif " + nom + " a bien été ajouté.");
             }
         })
     })
-
 });
