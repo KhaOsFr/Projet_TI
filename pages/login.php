@@ -1,13 +1,12 @@
 <?php
 if (isset($_POST['submit_login'])) { //name du submit
     extract($_POST,EXTR_OVERWRITE);
-    //var_dump($_POST);
     $ad = new AdminDB($cnx);
     $admin = $ad->getAdmin($login,$password);//$admin reçoit 1 ou 0
     if($admin){
         //créer variable de session pour admin
         $_SESSION['admin']=1; //sera vérifiée dans toutes les pages admin
-        ////rediriger vers dossier admin
+        //rediriger vers dossier admin
         ?>
         <meta http-equiv="refresh" content="0;URL=admin/index_.php?page=accueil_admin.php">
         <?php
