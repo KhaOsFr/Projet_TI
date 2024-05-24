@@ -12,6 +12,7 @@ $event = $eventDB->getAllEvents();
 
 var_dump($sportif);
 echo $sportif["nom"];
+print "<br>".$sportif[0]->nom;
 ?>
 
 <h2>Modification d'un sportif</h2>
@@ -19,15 +20,15 @@ echo $sportif["nom"];
     <form id="form_ajout" method="get" action="">
         <div class="mb-3">
             <label for="nom" class="form-label">Nom</label>
-            <input type="text" class="form-control" id="nom" name="nom" value=2>
+            <input type="text" class="form-control" id="nom" name="nom" value="<?= $sportif[0]->nom;?>">
         </div>
         <div class="mb-3">
             <label for="prenom" class="form-label">Prénom</label>
-            <input type="text" class="form-control" id="prenom" name="prenom" value="<?= $sportif->prenom ?>">
+            <input type="text" class="form-control" id="prenom" name="prenom" value="<?= $sportif[0]->prenom; ?>">
         </div>
         <div class="mb-3">
             <label for="age" class="form-label">Age</label>
-            <input type="number" class="form-control" id="age" name="age" required>
+            <input type="number" class="form-control" id="age" name="age" required value="<?= $sportif[0]->age; ?>">
         </div>
         <div class="mb-3">
             <label for="pays" class="form-label">Pays</label>
@@ -51,6 +52,8 @@ echo $sportif["nom"];
                 <?php endforeach; ?>
             </select>
         </div>
+        <!-- transmettre l'id d'enregistrements -->
+        <input type="hidden" name="id_sportif" id="id_sportif" value="<?= $sportif[0]->id_sportif;?>" >
         <button type="submit" id="texte_bouton_submit_sportif" class="btn btn-primary">
             Ajouter
         </button>
