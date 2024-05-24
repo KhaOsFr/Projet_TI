@@ -16,7 +16,7 @@ if ($nbr == 0) {
         </svg>
         Ajouter un événement
     </a>
-    <table class="table table-striped">
+    <table class="table table-striped" style="text-align: center; vertical-align: middle;">
         <thead>
         <tr>
             <th scope="col">Photo</th>

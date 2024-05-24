@@ -27,7 +27,7 @@ class SportifDB
     public function getAllSportifs()
     {
         try {
-            $query = "select * from vue_sportif_disc_pays";
+            $query = "select * from vue_sportif_disc_pays order by discipline, pays";
             $res = $this->_bd->prepare($query);
             $res->execute();
             $data = $res->fetchAll();
@@ -81,6 +81,41 @@ class SportifDB
                 return null;
             }
 
+            return $data;
+        } catch (PDOException $e) {
+            print "Echec " . $e->getMessage();
+        }
+    }
+
+    public function getSportifById($id)
+    {
+        try {
+            $query = "select * from sportif where id_sportif = $id";
+            $res = $this->_bd->prepare($query);
+            $res->execute();
+            $data = $res->fetchAll();
+            if (!empty($data)) {
+                foreach ($data as $d) {
+                    $_array[] = new Sportif($d);
+                }
+                return $_array;
+            } else {
+                return null;
+            }
+            return $data;
+        } catch (PDOException $e) {
+            print "Echec " . $e->getMessage();
+        }
+    }
+
+    public function deleteSportif($id)
+    {
+        try {
+            $query = "select delete_sportif(:id)";
+            $res = $this->_bd->prepare($query);
+            $res->bindValue(':id', $id);
+            $res->execute();
+            $data = $res->fetch();
             return $data;
         } catch (PDOException $e) {
             print "Echec " . $e->getMessage();

@@ -17,8 +17,28 @@ $(document).ready(function () {
             url: './src/php/ajax/ajaxAjoutSportif.php',
             success: function (data) {
                 console.log(data);
-                alert("Le sportif " + nom + " a bien été ajouté.");
+                window.location.href = 'index_.php?page=gestion_sportifs.php';
             }
         })
-    })
+    });
+
+    $('.delete_sportif').click(function (e) {
+        e.preventDefault();
+        if (confirm('Êtes-vous sûr de vouloir supprimer ce sportif ?')) {
+            let id = $(this).data('id');
+            $.ajax({
+                type: 'GET',
+                dataType: 'json',
+                url: './src/php/ajax/ajaxDeleteSportif.php',
+                data: {id: id},
+                success: function (response) {
+                    window.location.href = 'index_.php?page=gestion_sportifs.php';
+                },
+                error: function (xhr, status, error) {
+                    console.log('Error:', error);
+                    alert('Erreur de communication avec le serveur.');
+                }
+            });
+        }
+    });
 });
