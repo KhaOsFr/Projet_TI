@@ -90,8 +90,9 @@ class SportifDB
     public function getSportifById($id)
     {
         try {
-            $query = "select * from sportif where id_sportif = $id";
+            $query = "select * from sportif where id_sportif = :id";
             $res = $this->_bd->prepare($query);
+            $res->bindValue(':id',$id);
             $res->execute();
             $data = $res->fetchAll();
             if (!empty($data)) {
