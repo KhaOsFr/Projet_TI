@@ -1,0 +1,38 @@
+body {
+    background-image: url("../images/bg.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    width: 100%;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-height: 100vh;
+}
+
+.page {
+    background-color: rgba(128, 128, 128, 0.5); /* Gray with some transparency */
+    backdrop-filter: blur(3px);
+    border-radius: 20px;
+    padding: 20px;
+}
+
+* {
+    color: white;
+}
+
+select.form-control, select.form-control option {
+    color: black;
+}
+
+
+.menu a {
+    color: black;
+    text-decoration: none;
+    margin-right: 20px;
+}
+
+.menu a:hover {
+    text-decoration: underline;
+}

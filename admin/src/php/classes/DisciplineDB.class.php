@@ -10,15 +10,15 @@ class DisciplineDB
         $this->_bd = $cnx;
     }
 
-    public function getAllEvents(){
+    public function getAllDisc(){
         try{
-            $query="select * from vue_event_disc_pays";
+            $query="select * from discipline order by nom";
             $res = $this->_bd->prepare($query);
             $res->execute();
             $data = $res->fetchAll();
             if(!empty($data))  {
                 foreach($data as $d) {
-                    $_array[] = new Sportif($d);
+                    $_array[] = new Discipline($d);
                 }
                 return $_array;
             }

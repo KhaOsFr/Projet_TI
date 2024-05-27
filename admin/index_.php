@@ -11,7 +11,7 @@ require './src/php/utils/liste_includes.php';
             integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
             crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="./public/css/style.css" type="text/css">
+    <link rel="stylesheet" href="public/css/style2.css" type="text/css">
     <link rel="stylesheet" href="./public/css/custom.css" type="text/css">
     <script src="public/js/fonctions.js"></script>
 </head>
@@ -26,6 +26,7 @@ require './src/php/utils/liste_includes.php';
             include './src/php/utils/menu_admin.php';
         }
         ?>
+        <br>
         <a href="index_.php?page=disconnect.php" class="btn btn-danger">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                  class="bi bi-door-closed-fill" viewBox="0 0 16 16">
@@ -34,6 +35,7 @@ require './src/php/utils/liste_includes.php';
             Log out ADMIN
         </a>
     </nav>
+    <br>
     <div id="contenu">
         <?php
         if (!isset($_SESSION['page'])) {

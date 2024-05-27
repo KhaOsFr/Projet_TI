@@ -27,7 +27,7 @@ class SportifDB
     public function getAllSportifs()
     {
         try {
-            $query = "select * from vue_sportif_disc_pays order by discipline, pays";
+            $query = "select * from vue_sportif_disc_pays order by discipline, nom";
             $res = $this->_bd->prepare($query);
             $res->execute();
             $data = $res->fetchAll();
@@ -51,6 +51,26 @@ class SportifDB
         try {
             $query = "select ajout_sportif(:nom,:prenom,:age,:pays,:img,:event)";
             $res = $this->_bd->prepare($query);
+            $res->bindValue(':nom', $nom);
+            $res->bindValue(':prenom', $prenom);
+            $res->bindValue(':age', $age);
+            $res->bindValue(':pays', $pays);
+            $res->bindValue(':img', $img);
+            $res->bindValue(':event', $event);
+            $res->execute();
+            $data = $res->fetch();
+            return $data;
+        } catch (PDOException $e) {
+            print "Echec " . $e->getMessage();
+        }
+    }
+
+    public function update_sportif($id, $nom, $prenom, $age, $pays, $img, $event)
+    {
+        try {
+            $query = "select update_sportif(:id,:nom,:prenom,:age,:pays,:img,:event)";
+            $res = $this->_bd->prepare($query);
+            $res->bindValue(':id', $id);
             $res->bindValue(':nom', $nom);
             $res->bindValue(':prenom', $prenom);
             $res->bindValue(':age', $age);

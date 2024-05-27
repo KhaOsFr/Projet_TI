@@ -12,7 +12,7 @@ class PaysDB
 
     public function getAllPays(){
         try{
-            $query="select * from pays";
+            $query="select * from pays order by pays";
             $res = $this->_bd->prepare($query);
             $res->execute();
             $data = $res->fetchAll();
