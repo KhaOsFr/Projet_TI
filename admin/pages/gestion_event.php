@@ -2,8 +2,8 @@
     <h2>Gestion des events</h2>
 
     <?php
-    $sportifs = new EventDB($cnx);
-    $liste = $sportifs->getAllEventsView();
+    $events = new EventDB($cnx);
+    $liste = $events->getAllEventsView();
     $nbr = count($liste);
 
     if ($nbr == 0) {
@@ -12,9 +12,8 @@
         ?>
         <a href="index_.php?page=ajout_event.php" class="btn btn-primary" style="float:right;margin-bottom: 20px">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                 class="bi bi-person-fill-add" viewBox="0 0 16 16">
-                <path d="M12.5 16a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7m.5-5v1h1a.5.5 0 0 1 0 1h-1v1a.5.5 0 0 1-1 0v-1h-1a.5.5 0 0 1 0-1h1v-1a.5.5 0 0 1 1 0m-2-6a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
-                <path d="M2 13c0 1 1 1 1 1h5.256A4.5 4.5 0 0 1 8 12.5a4.5 4.5 0 0 1 1.544-3.393Q8.844 9.002 8 9c-5 0-6 3-6 4"/>
+                 class="bi bi-plus-circle-fill" viewBox="0 0 16 16">
+                <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3z"/>
             </svg>
             Ajouter un événement
         </a>
@@ -35,25 +34,25 @@
             for ($i = 0; $i < $nbr; $i++) {
                 ?>
                 <tr>
-                    <td contenteditable="false" id="<?= $liste[$i]->id_event; ?>" name="img_event">
-                        <img src="public/images/<?= $liste[$i]->img_e; ?>" height="250px">
+                    <td id="<?= $liste[$i]->id_event; ?>" name="img_event">
+                        <img src="public/images/<?= $liste[$i]->img_e; ?>" height="250px" alt="<?= $liste[$i]->nom; ?>">
                     </td>
-                    <td contenteditable="false" id="<?= $liste[$i]->id_event; ?>" name="nom_event">
+                    <td id="<?= $liste[$i]->id_event; ?>" name="nom_event">
                         <?= $liste[$i]->nom; ?>
                     </td>
-                    <td class="event-details" contenteditable="false" id="<?= $liste[$i]->id_event; ?>"
+                    <td class="event-details" id="<?= $liste[$i]->id_event; ?>"
                         name="date_deb_event">
                         <?= $liste[$i]->date_debut; ?>
                     </td>
-                    <td contenteditable="false" id="<?= $liste[$i]->id_event; ?>"
+                    <td id="<?= $liste[$i]->id_event; ?>"
                         name="date_fin_event">
                         <?= $liste[$i]->date_fin; ?>
                     </td>
-                    <td contenteditable="false" id="<?= $liste[$i]->id_event; ?>" name="localite">
+                    <td id="<?= $liste[$i]->id_event; ?>" name="localite">
                         <?= $liste[$i]->pays; ?><br><br>
-                        <img src="public/images/<?= $liste[$i]->img_p; ?>" height="30px">
+                        <img src="public/images/<?= $liste[$i]->img_p; ?>" height="30px" alt="<?= $liste[$i]->nom; ?>">
                     </td>
-                    <td contenteditable="false" id="<?= $liste[$i]->id_event; ?>" name="desc" style="max-width: 500px">
+                    <td id="<?= $liste[$i]->id_event; ?>" name="desc" style="max-width: 500px">
                         <?= $liste[$i]->description; ?>
                     </td>
                     <td>

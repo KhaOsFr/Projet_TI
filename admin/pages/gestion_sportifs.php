@@ -12,10 +12,8 @@
         ?>
         <a href="index_.php?page=ajout_sportif.php" class="btn btn-primary" style="float:right;margin-bottom: 20px">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                 class="bi bi-person-fill-add"
-                 viewBox="0 0 16 16">
-                <path d="M12.5 16a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7m.5-5v1h1a.5.5 0 0 1 0 1h-1v1a.5.5 0 0 1-1 0v-1h-1a.5.5 0 0 1 0-1h1v-1a.5.5 0 0 1 1 0m-2-6a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
-                <path d="M2 13c0 1 1 1 1 1h5.256A4.5 4.5 0 0 1 8 12.5a4.5 4.5 0 0 1 1.544-3.393Q8.844 9.002 8 9c-5 0-6 3-6 4"/>
+                 class="bi bi-plus-circle-fill" viewBox="0 0 16 16">
+                <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3z"/>
             </svg>
             Ajouter un sportif
         </a>
@@ -36,18 +34,18 @@
             for ($i = 0; $i < $nbr; $i++) {
                 ?>
                 <tr>
-                    <td contenteditable="false" id="<?= $liste[$i]->id_sportif; ?>" name="img"><img
+                    <td id="<?= $liste[$i]->id_sportif; ?>" name="img"><img
                                 src="public/images/<?= $liste[$i]->img_s; ?>" height="90px"></td>
-                    <td contenteditable="true" id="<?= $liste[$i]->id_sportif; ?>"
+                    <td id="<?= $liste[$i]->id_sportif; ?>"
                         name="nom"><?= $liste[$i]->nom; ?></td>
-                    <td contenteditable="true" id="<?= $liste[$i]->id_sportif; ?>"
+                    <td id="<?= $liste[$i]->id_sportif; ?>"
                         name="prenom"><?= $liste[$i]->prenom; ?></td>
-                    <td contenteditable="true" id="<?= $liste[$i]->id_sportif; ?>"
+                    <td id="<?= $liste[$i]->id_sportif; ?>"
                         name="age"><?= $liste[$i]->age; ?></td>
-                    <td contenteditable="false" id="<?= $liste[$i]->id_sportif; ?>" name="pays"><?= $liste[$i]->pays; ?>
+                    <td id="<?= $liste[$i]->id_sportif; ?>" name="pays"><?= $liste[$i]->pays; ?>
                         <br><br>
-                        <img src="public/images/<?= $liste[$i]->img_p; ?>" height="30px"></td>
-                    <td contenteditable="true" id="<?= $liste[$i]->id_sportif; ?>"
+                        <img src="public/images/<?= $liste[$i]->img_p; ?>" height="30px" alt="pays"></td>
+                    <td id="<?= $liste[$i]->id_sportif; ?>"
                         name="disc"><?= $liste[$i]->discipline; ?></td>
                     <td>
                         <a href="index_.php?page=update_sportif.php&id=<?= $liste[$i]->id_sportif ?>"
