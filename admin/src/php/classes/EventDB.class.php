@@ -32,6 +32,25 @@ class EventDB
         }
     }
 
+    public function getNomEvent($ide)
+    {
+        try {
+            $query = "select nom from event where id_event = :id_event";
+            $res = $this->_bd->prepare($query);
+            $res->bindParam(':id_event', $ide, PDO::PARAM_INT);
+            $res->execute();
+            $data = $res->fetch(PDO::FETCH_ASSOC);
+            if ($data) {
+                return $data['nom'];
+            } else {
+                return null;
+            }
+        } catch (PDOException $e) {
+            print "Échec " . $e->getMessage();
+            return null;
+        }
+    }
+
     public function getAllEvents()
     {
         try {

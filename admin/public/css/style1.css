@@ -34,3 +34,8 @@ select.form-control, select.form-control option {
 .menu a:hover {
     text-decoration: underline;
 }
+
+.titre {
+    color: #fff; /* Couleur du texte */
+    text-shadow: 0 0 10px #fff, 0 0 20px #7b7c7c, 0 0 30px #3f423f;
+}

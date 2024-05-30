@@ -122,7 +122,7 @@ $(document).ready(function () {
                     window.location.href = 'index_.php?page=gestion_event.php';
                 },
                 error: function (xhr, status, error) {
-                    console.log('Error:', error);
+                    console.log('Error : ', error);
                     alert('Erreur de communication avec le serveur.');
                 }
             });

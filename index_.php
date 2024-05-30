@@ -15,7 +15,7 @@ require './admin/src/php/utils/liste_includes.php';
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
             crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="admin/public/css/style2.css" type="text/css">
+    <link rel="stylesheet" href="admin/public/css/style1.css" type="text/css">
     <link rel="stylesheet" href="./admin/public/css/custom.css" type="text/css">
     <script src="admin/public/js/fonctions.js"></script>
 </head>

@@ -12,7 +12,7 @@ $event = $eventDB->getAllEvents();
 ?>
 
 <div class="page">
-    <h2>Modification d'un sportif</h2>
+    <h2 class="titre">Modification d'un sportif</h2>
     <div class="container">
         <form id="form_ajout" method="get" action="">
             <div class="mb-3">

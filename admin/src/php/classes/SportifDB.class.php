@@ -10,20 +10,6 @@ class SportifDB
         $this->_bd = $cnx;
     }
 
-    public function getSportifByDisc($disc)
-    {
-        try {
-            $query = "select * from vue_sportif_disc_pays where discipline = :disc order by pays";
-            $res = $this->_bd->prepare($query);
-            $res->bindValue(':disc', $disc);
-            $res->execute();
-            $data = $res->fetch();
-            return $data;
-        } catch (PDOException $e) {
-            print "Echec " . $e->getMessage();
-        }
-    }
-
     public function getAllSportifs()
     {
         try {
@@ -88,7 +74,7 @@ class SportifDB
     public function getSportifsByEvent($ide)
     {
         try {
-            $query = "select * from vue_sportif_disc_pays where id_event = ide";
+            $query = "select * from vue_sportif_disc_pays where id_event = $ide order by pays";
             $res = $this->_bd->prepare($query);
             $res->execute();
             $data = $res->fetchAll();
