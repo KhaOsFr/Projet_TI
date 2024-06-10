@@ -9,8 +9,8 @@ if ($nbr == 0) {
     ?>
 
     <div class="page" style="text-align: center">
-        <h2 class="titre">Bienvenue sur notre site d'événements sportifs</h2>
-        <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel"
+        <h2 class="titre">Bienvenue sur notre site d'événements sportifs<br><br></h2>
+        <div id="carouselExampleAutoplaying" class="carousel slide carousel-dark" data-bs-ride="carousel"
              style="max-width: 80%; margin: 0 auto">
             <div class="carousel-inner">
                 <?php

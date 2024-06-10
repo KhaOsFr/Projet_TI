@@ -36,6 +36,6 @@ select.form-control, select.form-control option {
 }
 
 .titre {
-    color: #fff; /* Couleur du texte */
+    color: #fff;
     text-shadow: 0 0 10px #fff, 0 0 20px #7b7c7c, 0 0 30px #3f423f;
 }
