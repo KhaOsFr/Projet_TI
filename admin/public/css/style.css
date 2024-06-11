@@ -20,6 +20,29 @@ body {
     color: white;
 }
 
+.tables {
+    text-align: center;
+    vertical-align: middle;
+}
+
+.btn_ajout {
+    float: right;
+    margin-bottom: 20px;
+}
+
+.desc_event {
+    max-width: 500px;
+}
+
+.accueil {
+    text-align: center;
+}
+
+.carousel {
+    max-width: 90%;
+    margin: 0 auto;
+}
+
 select.form-control, select.form-control option {
     color: black;
 }

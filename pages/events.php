@@ -9,7 +9,7 @@ if ($nbr == 0) {
 ?>
 <div class="page">
     <h2 class="titre">Nos événements</h2>
-    <table class="table table-dark table-hover" style="text-align: center; vertical-align: middle;">
+    <table class="table table-dark table-hover tables">
         <thead>
         <tr>
             <th scope="col">Photo</th>
@@ -47,7 +47,7 @@ if ($nbr == 0) {
                     <img src="admin/public/images/<?= $liste[$i]->img_p; ?>" height="30px"
                          alt="<?= $liste[$i]->nom; ?>">
                 </td>
-                <td id="<?= $liste[$i]->id_event; ?>" name="desc" style="max-width: 500px">
+                <td id="<?= $liste[$i]->id_event; ?>" name="desc" class="desc_event">
                     <?= $liste[$i]->description; ?>
                 </td>
             </tr>

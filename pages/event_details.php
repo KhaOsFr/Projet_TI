@@ -15,7 +15,7 @@ if ($nbr == 0) {
 ?>
 <div class="page">
     <h2 class="titre">Sportifs participant à <?= $nom ?></h2>
-    <table class="table table-dark table-hover" style="text-align: center; vertical-align: middle;">
+    <table class="table table-dark table-hover tables">
         <thead>
         <tr>
             <th scope="col">Photo</th>

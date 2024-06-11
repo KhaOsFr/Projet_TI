@@ -9,14 +9,14 @@ if ($nbr == 0) {
 ?>
 <div class="page">
     <h2 class="titre">Gestion des sportifs</h2>
-    <a href="index_.php?page=ajout_sportif.php" class="btn btn-primary" style="float:right;margin-bottom: 20px">
+    <a href="index_.php?page=ajout_sportif.php" class="btn btn-primary btn_ajout">
         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
              class="bi bi-plus-circle-fill" viewBox="0 0 16 16">
             <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3z"/>
         </svg>
         Ajouter un sportif
     </a>
-    <table class="table table-dark table-hover" style="text-align: center; vertical-align: middle;">
+    <table class="table table-dark table-hover tables">
         <thead>
         <tr>
             <th scope="col">Photo</th>

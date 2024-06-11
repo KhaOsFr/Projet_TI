@@ -8,10 +8,9 @@ if ($nbr == 0) {
 } else {
     ?>
 
-    <div class="page" style="text-align: center">
+    <div class="page accueil">
         <h2 class="titre">Bienvenue sur notre site d'événements sportifs<br><br></h2>
-        <div id="carouselExampleAutoplaying" class="carousel slide carousel-dark" data-bs-ride="carousel"
-             style="max-width: 80%; margin: 0 auto">
+        <div id="carouselExampleAutoplaying" class="carousel slide carousel-dark carousel" data-bs-ride="carousel">
             <div class="carousel-inner">
                 <?php
                 for ($i = 0; $i < $nbr; $i++) {

@@ -8,14 +8,14 @@ if ($nbr == 0) {
 ?>
 <div class="page">
     <h2 class="titre">Gestion des events</h2>
-    <a href="index_.php?page=ajout_event.php" class="btn btn-primary" style="float:right;margin-bottom: 20px">
+    <a href="index_.php?page=ajout_event.php" class="btn btn-primary btn_ajout">
         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
              class="bi bi-plus-circle-fill" viewBox="0 0 16 16">
             <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3z"/>
         </svg>
         Ajouter un événement
     </a>
-    <table class="table table-dark table-hover" style="text-align: center; vertical-align: middle;">
+    <table class="table table-dark table-hover tables">
         <thead>
         <tr>
             <th scope="col">Photo</th>
@@ -50,7 +50,7 @@ if ($nbr == 0) {
                     <?= $liste[$i]->pays; ?><br><br>
                     <img src="public/images/<?= $liste[$i]->img_p; ?>" height="30px" alt="<?= $liste[$i]->nom; ?>">
                 </td>
-                <td id="<?= $liste[$i]->id_event; ?>" name="desc" style="max-width: 500px">
+                <td id="<?= $liste[$i]->id_event; ?>" name="desc" class="desc_event">
                     <?= $liste[$i]->description; ?>
                 </td>
                 <td>
